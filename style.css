@@ -95,6 +95,9 @@ grid-column-gap: 24px;
     width: 224px;
     height: 104px;
 }
+.course{
+    border: 3px solid red;
+}
 .course-info{
     display: flex;
     align-items: center;
@@ -109,3 +112,31 @@ grid-column-gap: 24px;
 .fa-star.empty{
     color:#AEAEAE;
 }
+
+/* ---------------------------------------------------------                Media queries 
+----------- ---- -- --- -- ----- ------------ -*/
+
+/* Mobile screen */
+
+ @media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+            grid-template-columns: repeat(1,1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+    
+ }
+ /* Tablets screen */
+
+ @media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+ }
